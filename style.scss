@@ -39,11 +39,11 @@ html{
 
 main{
     width: 100%;
-    @include flex-column(2rem);
+    @include flex-column(1rem);
     align-items: center;
    
 
-    section{
+.view1{
         
         padding: 0.8rem;
         width: 100%;
@@ -104,12 +104,91 @@ main{
             }
         }
     }
+
+    .view2{
+        gap: 6rem;
+    color: beige;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  
+.smallleft{
+@include flex-column(2rem);
+justify-content: center;
+align-items: center;    
+
+
+#left{
+    h4{
+        font-size: 0.7rem;
+        text-align: center;
+        font-weight: 100;
+    }
+    h3{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+}
+
+#right{
+    h4{
+        font-size: 0.7rem;
+        text-align: center;
+        font-weight: 100;
+    }
+    h3{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+}
+
+}
+    
+.smallright{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;    
+gap: 30px;
+
+
+#left2{
+    h4{
+        font-size: 0.7rem;
+        text-align: center;
+        font-weight: 100;
+    }
+    h3{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+}
+
+#right2{
+    h4{
+        font-size: 0.7rem;
+        text-align: center;
+        font-weight: 100;
+    }
+    h3{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+}
+
+}
+
+}
+
+
+
+
 }
 
 @media(min-width:600px){
     main{
-        section{
-        
+        section.view1{
             flex-direction: row;
             gap: 1rem;
 
@@ -132,5 +211,53 @@ main{
                 }
             }
         }
+section.view2{
+    .smallleft{
+        gap: 15rem;
+        flex-direction: row;
+        #left{
+            
+           h4{
+font-size: 1rem;
+           }
+           h3{
+            font-size: 3rem;
+           }
+        }
+        #right{
+                       h4{
+font-size: 1rem;
+           }
+           h3{
+            font-size: 3rem;
+           }
+        }
     }
+
+       .smallright{
+        gap: 15rem;
+        flex-direction: row;
+        #left2{
+           h4{
+font-size: 1rem;
+           }
+           h3{
+            font-size: 3rem;
+           }
+        }
+        #right2{
+                       h4{
+font-size: 1rem;
+           }
+           h3{
+            font-size: 3rem;
+           }
+        }
+    }
+}
+
+
+
+}
+
 }
